@@ -1,0 +1,135 @@
+:root {
+  --cyan: #2bb3b1;
+  --dark-cyan: #4abebd;
+  --yellow: #a5c02d;
+  --bg-color: #e6eff6;
+  --text-color: #e9ffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: Karla, sans-serif;
+  color: var(--text-color);
+  padding: 64px 32px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.box {
+  padding: 20px;
+}
+
+.box:first-of-type {
+  border-radius: 10px 10px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .box:first-of-type {
+    grid-column: 1/3;
+  }
+
+  .box:nth-of-type(2) {
+    border-radius: 0 0 0 10px;
+  }
+}
+
+.box:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box:last-of-type {
+    border-radius: 0 0 10px 0;
+  }
+}
+
+.box__title {
+  color: var(--cyan);
+  font-size: 1.4rem;
+}
+
+.box__title--white {
+  color: var(--text-color);
+}
+
+.box__subtitle {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.box__text--dark {
+  color: #333;
+  font-weight: 500;
+}
+
+.box--light-blue {
+  background-color: #fff;
+}
+
+.box--cyan {
+  background-color: var(--cyan);
+}
+
+.box--dark-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.box__title {
+  margin: 0;
+}
+
+.box__currency {
+  font-size: 2rem;
+}
+
+.box__currency--small {
+  font-size: 1.3rem;
+}
+
+.box__currency::before {
+  content: '$';
+}
+
+.box__periodicity {
+  margin-left: 10px;
+  color: #76d4d4;
+}
+
+.box__button {
+  display: block;
+  background-color: var(--yellow);
+  text-decoration: none;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
